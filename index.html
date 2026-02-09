@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Online Result Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+  <div class="header">🏫 Online Result Portal</div>
+
+  <div class="container">
+
+    <!-- LOGIN CARD -->
+    <div class="content" id="loginCard">
+      <div class="sub">Enter Roll Number, Password, DOB & Captcha</div>
+
+      <div class="form-row">
+        <label>Roll Number</label>
+        <input type="text" id="roll">
+      </div>
+
+      <div class="form-row">
+        <label>Password</label>
+        <input type="password" id="password">
+      </div>
+
+      <div class="form-row">
+        <label>DOB (DD-MM-YYYY)</label>
+        <input type="text" id="dob" placeholder="05-07-2000">
+      </div>
+
+      <div class="form-row">
+        <label>Captcha: <span id="captchaQ"></span></label>
+        <input type="text" id="captchaAns">
+      </div>
+
+      <button class="btn" onclick="login()">Submit</button>
+      <div id="error" class="error"></div>
+    </div>
+
+    <!-- RESULT CARD -->
+    <div class="content" id="resultCard" style="display:none;">
+      <div class="sub">Result Details</div>
+
+      <div class="box highlight">
+        <h3>🏆 Top 3 Performers of the Day</h3>
+        <p id="topperInfo"></p>
+      </div>
+
+      <div class="box">
+        <h3>Candidate Details</h3>
+        <table>
+          <tr><th>Name</th><td id="name"></td></tr>
+          <tr><th>Roll No</th><td id="rollShow"></td></tr>
+          <tr><th>Rank</th><td id="rank"></td></tr>
+          <tr><th>Percentile</th><td id="percentile"></td></tr>
+          <tr><th>Accuracy</th><td id="accuracy"></td></tr>
+        </table>
+      </div>
+
+      <div class="box">
+        <h3>Marks (with Subject-wise Cut-offs)</h3>
+        <table>
+          <tr><th>Subject</th><th>Marks</th><th>Cut-off</th></tr>
+          <tr><td>Weekly The Hindu Editorial</td><td id="weeklyH"></td><td id="cut_weeklyH"></td></tr>
+          <tr><td>Weekly Current Affairs</td><td id="weeklyCA"></td><td id="cut_weeklyCA"></td></tr>
+          <tr><td>The Hindu Editorial (09/02/2026)</td><td id="hindu"></td><td id="cut_hindu"></td></tr>
+          <tr><td>Current Affairs (09/02/2026)</td><td id="ca"></td><td id="cut_ca"></td></tr>
+          <tr><td>Descriptive Writing (09/02/2026)</td><td id="desc"></td><td id="cut_desc"></td></tr>
+        </table>
+        <div class="note">* indicates sectional cut-off not cleared</div>
+      </div>
+
+      <div class="box">
+        <h3>Overall Result</h3>
+        <table>
+          <tr><th>Total Marks</th><td id="total"></td></tr>
+          <tr><th>Overall Cut-off</th><td id="cutoff"></td></tr>
+          <tr><th>Status</th><td id="status"></td></tr>
+        </table>
+      </div>
+
+      <button class="btn" onclick="downloadMarksheet()">📥 Download Marksheet</button>
+      <button class="btn" id="certBtn" style="display:none" onclick="downloadCertificate()">🏅 Download Certificate</button>
+      <button class="btn secondary" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="footer">© Online Result Portal</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
