@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f3f6fb;
+  margin:0;
+}
+
+.header {
+  background:linear-gradient(90deg,#0b3a6f,#2563eb);
+  color:#fff;
+  padding:14px;
+  text-align:center;
+  font-weight:bold;
+}
+
+.container {
+  max-width:920px;
+  margin:24px auto;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 10px 24px rgba(0,0,0,.12);
+}
+
+.content { padding:20px; }
+
+.sub {
+  text-align:center;
+  color:#475569;
+  font-size:13px;
+  margin-bottom:16px;
+}
+
+.form-row {
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:10px;
+  margin-bottom:12px;
+}
+
+input {
+  padding:8px;
+  border:1px solid #cbd5e1;
+  border-radius:6px;
+}
+
+.btn {
+  background:#2563eb;
+  color:#fff;
+  border:none;
+  padding:9px 16px;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:bold;
+  margin-right:8px;
+}
+
+.btn.secondary { background:#64748b; }
+
+.error {
+  color:#dc2626;
+  font-size:13px;
+  margin-top:8px;
+  text-align:center;
+}
+
+.box {
+  border:1px solid #e5e7eb;
+  border-radius:8px;
+  margin-top:14px;
+  overflow:hidden;
+}
+
+.box h3 {
+  margin:0;
+  padding:10px 12px;
+  background:linear-gradient(90deg,#eef2ff,#dbeafe);
+  font-size:14px;
+}
+
+.highlight {
+  border:2px solid #facc15;
+  background:#fffbeb;
+}
+
+table {
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
+
+td, th {
+  padding:9px 10px;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.pass { color:#15803d; font-weight:bold; }
+.fail { color:#b91c1c; font-weight:bold; }
+
+.note {
+  font-size:12px;
+  color:#64748b;
+  padding:6px 10px;
+}
+
+/* Color Indicators */
+.indicator-green { color:#15803d; font-weight:700; }
+.indicator-orange { color:#c2410c; font-weight:700; }
+.indicator-red { color:#b91c1c; font-weight:700; }
+
+.badge-green {
+  background:#dcfce7; color:#166534; padding:2px 8px;
+  border-radius:999px; font-size:11px; font-weight:700;
+}
+.badge-orange {
+  background:#ffedd5; color:#9a3412; padding:2px 8px;
+  border-radius:999px; font-size:11px; font-weight:700;
+}
+.badge-red {
+  background:#fee2e2; color:#991b1b; padding:2px 8px;
+  border-radius:999px; font-size:11px; font-weight:700;
+}
+
+.footer {
+  text-align:center;
+  font-size:12px;
+  color:#64748b;
+  padding:14px;
+}
